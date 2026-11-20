@@ -1,0 +1,628 @@
+/* ========================================================================== 
+   Marmalade Tabby — theme for Google AI Studio
+   Scoped under html.tabby-on. Native AI Studio code frames stay intact.
+   ========================================================================== */
+
+html.tabby-on {
+  --t-orange: #F27D26;
+  --t-cinnamon: #C8551E;
+  --t-cream: #FFF9F2;
+  --t-apricot: #FFE5CC;
+  --t-espresso: #3E2723;
+  --t-beige: #F6EDE3;
+  --t-prompt: #FFFDF9;
+  --t-border: #F2D7BD;
+  --t-soft: #8A6254;
+  --t-font: "Tabby Quicksand", "Quicksand", system-ui, sans-serif;
+  --t-script: "Tabby Great Vibes", "Great Vibes", cursive;
+  --t-shadow: 0 4px 16px rgba(62, 39, 35, .05);
+  --t-paw: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cg fill='%23F27D26'%3E%3Cellipse cx='16' cy='21' rx='8' ry='6.5'/%3E%3Cellipse cx='7' cy='13' rx='3.5' ry='4.5' transform='rotate(-25 7 13)'/%3E%3Cellipse cx='13' cy='7' rx='3.4' ry='4.6' transform='rotate(-8 13 7)'/%3E%3Cellipse cx='20' cy='7' rx='3.4' ry='4.6' transform='rotate(8 20 7)'/%3E%3Cellipse cx='26' cy='13' rx='3.5' ry='4.5' transform='rotate(25 26 13)'/%3E%3C/g%3E%3C/svg%3E");
+  --t-paw-white: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cg fill='%23FFF9F2'%3E%3Cellipse cx='16' cy='21' rx='8' ry='6.5'/%3E%3Cellipse cx='7' cy='13' rx='3.5' ry='4.5' transform='rotate(-25 7 13)'/%3E%3Cellipse cx='13' cy='7' rx='3.4' ry='4.6' transform='rotate(-8 13 7)'/%3E%3Cellipse cx='20' cy='7' rx='3.4' ry='4.6' transform='rotate(8 20 7)'/%3E%3Cellipse cx='26' cy='13' rx='3.5' ry='4.5' transform='rotate(25 26 13)'/%3E%3C/g%3E%3C/svg%3E");
+  --t-plaid-bg:
+    repeating-linear-gradient(0deg, transparent 0, transparent 46px, rgba(255, 229, 204, .6) 46px, rgba(255, 229, 204, .6) 92px),
+    repeating-linear-gradient(90deg, transparent 0, transparent 46px, rgba(255, 229, 204, .6) 46px, rgba(255, 229, 204, .6) 92px),
+    repeating-linear-gradient(0deg, rgba(242, 125, 38, .08) 0, rgba(242, 125, 38, .08) 1px, transparent 1px, transparent 23px),
+    repeating-linear-gradient(90deg, rgba(242, 125, 38, .08) 0, rgba(242, 125, 38, .08) 1px, transparent 1px, transparent 23px);
+
+  color-scheme: light;
+  background-color: var(--t-cream) !important;
+  background-image: var(--t-plaid-bg) !important;
+  background-size: 92px 92px, 92px 92px, 23px 23px, 23px 23px !important;
+  background-attachment: fixed !important;
+}
+
+/* Đánh sập biến màu nền Angular Material trên cả html, body và class theme */
+html.tabby-on,
+html.tabby-on body,
+html.tabby-on .theme-light,
+html.tabby-on .theme-dark,
+html.tabby-on .light-theme,
+html.tabby-on .dark-theme {
+  --mat-sys-primary: var(--t-orange) !important;
+  --mat-sys-on-primary: var(--t-cream) !important;
+  --mat-sys-primary-container: var(--t-apricot) !important;
+  --mat-sys-on-primary-container: var(--t-espresso) !important;
+  --mat-sys-secondary-container: var(--t-beige) !important;
+  --mat-sys-on-secondary-container: var(--t-espresso) !important;
+
+  --mat-sys-background: transparent !important;
+  --mat-sys-surface: transparent !important;
+  --mat-sys-surface-container-lowest: transparent !important;
+  --mat-sys-surface-container-low: transparent !important;
+  --mat-sys-surface-container: transparent !important;
+  --mat-sys-surface-container-high: transparent !important;
+  --mat-sys-surface-container-highest: transparent !important;
+
+  --mat-sys-on-surface: var(--t-espresso) !important;
+  --mat-sys-on-surface-variant: var(--t-soft) !important;
+  --mat-sys-outline: var(--t-orange) !important;
+  --mat-sys-outline-variant: var(--t-border) !important;
+}
+
+/* Lớp nền plaid nằm ở tầng dưới cùng (z-index: 0), không bao giờ đè lên nội dung */
+html.tabby-on::before {
+  content: "";
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  background-color: var(--t-cream) !important;
+  background-image: var(--t-plaid-bg) !important;
+  background-size: 92px 92px, 92px 92px, 23px 23px, 23px 23px !important;
+}
+
+/* Dọn sạch các lớp vỏ bọc của Angular để lộ nền plaid phía dưới */
+html.tabby-on body,
+html.tabby-on .theme-light,
+html.tabby-on .theme-dark,
+html.tabby-on .light-theme,
+html.tabby-on .dark-theme,
+html.tabby-on .mat-app-background,
+html.tabby-on .mat-typography,
+html.tabby-on :is(
+  ms-app, .app-container, .layout-wrapper, .layout-main, .main-content, main,
+  .overall-layout, .studio-layout, ms-zero-state,
+  mat-sidenav-container, mat-drawer-container, .mat-drawer-container, .mat-sidenav-container,
+  mat-sidenav-content, mat-drawer-content, .mat-drawer-content, .mat-sidenav-content,
+  ms-prompt-switcher, ms-chunk-editor, ms-chat-session, .chat-container, .chat-view-container,
+  .chat-session-content, ms-autoscroll-container, .page-container, .content-container,
+  .mdc-drawer, .mdc-drawer__content, ms-chat-bottom-bar, .bottom-container
+),
+html.tabby-on .tabby-clear {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Kéo toàn bộ giao diện AI Studio lên trên lớp nền plaid */
+html.tabby-on ms-app,
+html.tabby-on .app-container {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+html.tabby-on body {
+  color: var(--t-espresso) !important;
+  font-family: var(--t-font);
+}
+
+/* ==========================================================================
+   PHÂN TẦNG Z-INDEX: Đẩy toàn bộ dải blur xuống tầng 1, nâng tai mèo lên tầng 220
+   ========================================================================== */
+html.tabby-on ms-autoscroll-container,
+html.tabby-on :is(.chat-view-container, .chat-session-content):not(:has(:is(ms-prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container))) {
+  position: relative !important;
+  z-index: 1 !important;
+}
+html.tabby-on :is(
+  ms-chunk-editor, .chunk-editor-main,
+  ms-chat-session, .chat-container, .chat-view-container, .chat-session-content, main
+) > :not(:has(:is(ms-prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container))):not(:is(footer, ms-prompt-switcher, .prompt-switcher-container, ms-prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container, ms-chat-bottom-bar, .bottom-container)) {
+  z-index: 1 !important;
+}
+html.tabby-on :is(
+  ms-chunk-editor, ms-chat-session, .chat-view-container, .chat-session-content, ms-autoscroll-container,
+  footer, ms-prompt-switcher, .prompt-switcher-container, ms-chat-bottom-bar, .bottom-container,
+  .prompt-input-wrapper-container, ms-prompt-input-wrapper
+)::before,
+html.tabby-on :is(
+  ms-chunk-editor, ms-chat-session, .chat-view-container, .chat-session-content, ms-autoscroll-container,
+  footer, ms-prompt-switcher, .prompt-switcher-container, ms-chat-bottom-bar, .bottom-container,
+  .prompt-input-wrapper-container, ms-prompt-input-wrapper
+)::after {
+  z-index: 1 !important;
+}
+html.tabby-on :is(
+  footer, ms-prompt-switcher, .prompt-switcher-container,
+  ms-chat-bottom-bar, .bottom-container, .prompt-input-wrapper-container, ms-prompt-input-wrapper
+) > :not(:has(:is(ms-prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container))):not(:is(ms-prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container)) {
+  z-index: 1 !important;
+}
+
+html.tabby-on :is(
+  footer,
+  ms-prompt-switcher, .prompt-switcher-container,
+  ms-prompt-input-wrapper, .prompt-input-wrapper-container,
+  ms-prompt-box, .prompt-box-container,
+  ms-chat-bottom-bar, .bottom-container
+) {
+  position: relative;
+  z-index: 200 !important;
+  overflow: visible !important;
+}
+html.tabby-on ms-app :is(div, section, footer):has(:is(ms-prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container)):not(:has(:is(ms-autoscroll-container, ms-chat-turn))) {
+  z-index: 200 !important;
+  overflow: visible !important;
+}
+html.tabby-on :is(ms-prompt-switcher, .prompt-switcher-container, ms-prompt-input-wrapper, ms-chat-bottom-bar, .bottom-container) {
+  padding-top: 0 !important;
+}
+
+/* Apricot sewing basket: navigation and settings. */
+html.tabby-on :is(
+  ms-navbar, .nav-container, mat-sidenav, mat-drawer, .mat-drawer, .mat-sidenav,
+  ms-run-settings, ms-right-side-panel, .run-settings, .settings-panel
+) {
+  background: var(--t-apricot) !important;
+  border-color: var(--t-border) !important;
+  color: var(--t-espresso) !important;
+  font-family: var(--t-font) !important;
+}
+html.tabby-on :is(ms-toolbar, mat-toolbar, .page-header, .toolbar-container) {
+  background: rgba(255, 229, 204, .92) !important;
+  color: var(--t-espresso) !important;
+}
+html.tabby-on :is(ms-run-settings, ms-right-side-panel, .run-settings, .settings-panel) :is(mat-card, .mat-mdc-card, .settings-card, .settings-section),
+html.tabby-on :is(.mat-mdc-menu-panel, .mat-mdc-select-panel, .mat-mdc-autocomplete-panel, .mat-mdc-dialog-surface, .mdc-dialog__surface) {
+  background: var(--t-cream) !important;
+  border: 1.5px solid var(--t-border) !important;
+  border-radius: 18px !important;
+  box-shadow: var(--t-shadow) !important;
+  color: var(--t-espresso) !important;
+  font-family: var(--t-font) !important;
+}
+
+/* ==========================================================================
+   Khung chat dạng khăn vải mềm mại:
+   2 cạnh trên & trái bắt viền sáng, 2 cạnh dưới & phải tan bóng đổ êm
+   ========================================================================== */
+html.tabby-on ms-chat-turn {
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Model turn: khăn vải linen kem mộc, chỉ may cam đất, sáng trên-trái, bóng mềm dưới-phải */
+html.tabby-on :is(ms-chat-turn .chat-turn-container, ms-chat-turn [class*="chat-turn-container"]) {
+  background-color: var(--t-cream) !important;
+  background-image:
+    linear-gradient(135deg, rgba(255, 255, 255, .72) 0%, rgba(255, 249, 242, 0) 45%, rgba(168, 108, 72, .055) 100%),
+    repeating-linear-gradient(0deg, rgba(138, 98, 84, .032) 0 1px, transparent 1px 5px),
+    repeating-linear-gradient(90deg, rgba(138, 98, 84, .032) 0 1px, transparent 1px 5px) !important;
+  border-width: 1.5px !important;
+  border-style: solid !important;
+  border-top-color: rgba(255, 255, 255, .96) !important;
+  border-left-color: rgba(255, 255, 255, .92) !important;
+  border-right-color: rgba(214, 174, 140, .22) !important;
+  border-bottom-color: rgba(214, 174, 140, .3) !important;
+  border-radius: 18px !important;
+  outline: 1.5px dashed rgba(200, 85, 30, .32) !important;
+  outline-offset: -7px !important;
+  box-shadow:
+    inset 2px 2px 6px rgba(255, 255, 255, .95),
+    inset -3px -4px 10px rgba(176, 126, 92, .13),
+    -1px -1px 5px rgba(255, 255, 255, .65),
+    4px 5px 11px -2px rgba(138, 98, 84, .18),
+    9px 12px 24px -5px rgba(62, 39, 35, .13) !important;
+  color: var(--t-espresso) !important;
+  transition: transform .25s ease, box-shadow .25s ease, outline-color .25s ease !important;
+}
+html.tabby-on :is(ms-chat-turn .chat-turn-container, ms-chat-turn [class*="chat-turn-container"]):not(:has(:is(.chat-turn-container, [class*="chat-turn-container"]))):hover {
+  transform: translate(-1px, -2px);
+  outline-color: rgba(200, 85, 30, .52) !important;
+  box-shadow:
+    inset 2px 2px 6px rgba(255, 255, 255, .98),
+    inset -3px -4px 10px rgba(176, 126, 92, .14),
+    -1px -1px 6px rgba(255, 255, 255, .75),
+    6px 7px 14px -2px rgba(138, 98, 84, .2),
+    12px 15px 28px -5px rgba(62, 39, 35, .15) !important;
+}
+
+/* User turn: khăn vải cam đào ấm, chỉ khâu nâu quế, sáng trên-trái, bóng mềm dưới-phải */
+html.tabby-on :is(ms-chat-turn .chat-turn-container.user, ms-chat-turn [class*="chat-turn-container"].user, ms-chat-turn.user .chat-turn-container) {
+  background-color: var(--t-apricot) !important;
+  background-image:
+    linear-gradient(135deg, rgba(255, 252, 245, .58) 0%, rgba(255, 229, 204, 0) 48%, rgba(200, 85, 30, .065) 100%),
+    repeating-linear-gradient(0deg, rgba(200, 85, 30, .038) 0 1px, transparent 1px 5px),
+    repeating-linear-gradient(90deg, rgba(200, 85, 30, .038) 0 1px, transparent 1px 5px) !important;
+  border-top-color: rgba(255, 250, 242, .92) !important;
+  border-left-color: rgba(255, 250, 242, .88) !important;
+  border-right-color: rgba(218, 126, 68, .25) !important;
+  border-bottom-color: rgba(218, 126, 68, .34) !important;
+  outline: 1.5px dashed rgba(200, 85, 30, .48) !important;
+  outline-offset: -7px !important;
+  box-shadow:
+    inset 2px 2px 6px rgba(255, 250, 242, .82),
+    inset -3px -4px 10px rgba(200, 85, 30, .15),
+    -1px -1px 5px rgba(255, 248, 238, .55),
+    4px 5px 11px -2px rgba(185, 92, 38, .22),
+    9px 12px 24px -5px rgba(145, 62, 18, .16) !important;
+}
+html.tabby-on :is(ms-chat-turn .chat-turn-container.user, ms-chat-turn [class*="chat-turn-container"].user, ms-chat-turn.user .chat-turn-container):not(:has(:is(.chat-turn-container, [class*="chat-turn-container"]))):hover {
+  outline-color: rgba(200, 85, 30, .68) !important;
+  box-shadow:
+    inset 2px 2px 6px rgba(255, 252, 246, .88),
+    inset -3px -4px 10px rgba(200, 85, 30, .16),
+    -1px -1px 6px rgba(255, 248, 238, .65),
+    6px 7px 14px -2px rgba(185, 92, 38, .25),
+    12px 15px 28px -5px rgba(145, 62, 18, .19) !important;
+}
+
+/* Chống trùng viền/khối lồng nhau trên các wrapper ngoài */
+html.tabby-on :is(ms-chat-turn .chat-turn-container, ms-chat-turn [class*="chat-turn-container"]):has(:is(.chat-turn-container, [class*="chat-turn-container"])) {
+  background: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+html.tabby-on :is(ms-chat-turn, ms-autoscroll-container, .chat-view-container, .chat-session-content) { scroll-padding-top: 80px; }
+html.tabby-on :is(ms-chat-turn .chat-turn-container, ms-chat-turn [class*="chat-turn-container"]) > :last-child { margin-bottom: 0 !important; }
+html.tabby-on ms-chat-turn :is(.turn-footer, .turn-actions, .actions-container, .actions, ms-chat-turn-options, [class*="footer"]) {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+html.tabby-on ms-chat-turn :is(hr, mat-divider, .mat-divider) { display: none !important; }
+html.tabby-on :is(ms-chat-turn, ms-cmark-node, ms-text-chunk, .turn-content, .model-prompt-container) {
+  font-family: var(--t-font) !important;
+  color: var(--t-espresso) !important;
+}
+html.tabby-on :is(ms-cmark-node, ms-text-chunk, .turn-content) :is(p, li, blockquote, td, th) {
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 500;
+}
+html.tabby-on :is(ms-cmark-node, .turn-content) :is(h1, h2, h3, strong, b) { color: var(--t-cinnamon) !important; }
+html.tabby-on :is(ms-cmark-node, .turn-content) a { color: var(--t-cinnamon) !important; text-decoration-color: var(--t-orange); }
+html.tabby-on :is(ms-cmark-node, .turn-content) blockquote {
+  border-left: 3px solid var(--t-orange) !important;
+  background: var(--t-beige) !important;
+  border-radius: 0 12px 12px 0;
+  color: var(--t-espresso) !important;
+}
+html.tabby-on :is(.author-label, .turn-header, .chat-turn-header) {
+  font-family: var(--t-font) !important;
+  font-weight: 700;
+  color: var(--t-cinnamon) !important;
+}
+/* Khung Thoughts dạng túi vải khâu chìm nhẹ bên trong mảnh khăn */
+html.tabby-on :is(ms-thought-chunk, .thought-panel) {
+  background: var(--t-beige) !important;
+  border: 1.5px dashed rgba(200, 85, 30, .38) !important;
+  border-radius: 14px !important;
+  box-shadow: inset 0 2px 6px rgba(62, 39, 35, .07) !important;
+  color: var(--t-soft) !important;
+}
+
+/* Warm Beige code fabric; no additional frame, halo or divider is introduced. */
+html.tabby-on :is(pre, code, ms-code-block, .code-block, .hljs) {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace !important;
+}
+html.tabby-on ms-chat-turn ms-code-block {
+  display: block;
+  color: var(--t-espresso) !important;
+  background: var(--t-beige) !important;
+}
+html.tabby-on ms-chat-turn ms-code-block :is(mat-expansion-panel, .mat-expansion-panel, mat-expansion-panel-header, .mat-expansion-panel-header, .code-block-header, .mat-expansion-panel-body) {
+  background: var(--t-beige) !important;
+  box-shadow: none !important;
+}
+html.tabby-on :not(pre) > code {
+  background: var(--t-beige) !important;
+  color: var(--t-cinnamon) !important;
+  border-radius: 6px;
+  padding: 0 .35em;
+}
+
+/* ==========================================================================
+   Khung nhập chat đầu mèo: 1 viền liền khối, 2 tai gọn & vuốt nhọn chóp,
+   nằm sát mép trái/phải và nổi lên hẳn tầng trên dải blur.
+   ========================================================================== */
+html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container) {
+  background: var(--t-prompt) !important;
+  border: 2px solid var(--t-orange) !important;
+  border-radius: 26px !important;
+  box-shadow: var(--t-shadow) !important;
+  transition: box-shadow .25s, border-color .25s;
+}
+html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container):has(:is(.prompt-input-wrapper, ms-prompt-box, .prompt-box-container)) {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container):not(:has(:is(.prompt-input-wrapper, ms-prompt-box, .prompt-box-container))) {
+  position: relative !important;
+  overflow: visible !important;
+  margin-top: 0 !important;
+  z-index: 210 !important;
+}
+
+/* 2 tai mèo nhỏ gọn, vuốt nhọn chóp, sát mép trái/phải và nằm ở tầng cao hơn dải blur */
+html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container):not(:has(:is(.prompt-input-wrapper, ms-prompt-box, .prompt-box-container)))::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  top: -38px;
+  height: 64px;
+  z-index: 220 !important;
+  pointer-events: none;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 64'%3E%3Cpath d='M1 63L1 60C1 36 9 16 20.5 3.5Q22.5 1 24.5 4C34 15 41 26 45 33Q47.5 37 53 37L53 40L26 40A23 23 0 0 0 3 63Z' fill='%23FFFDF9'/%3E%3Cpath d='M11 37C12 25 16.5 16 22 10.5Q23 9.5 24 11C29.5 18 34 26.5 36.5 34Q37 36.5 33.5 36.5Q23 35 13.5 38.5Q11 39.2 11 37Z' fill='%23FFD8B8'/%3E%3Cpath d='M1 63L1 60C1 36 9 16 20.5 3.5Q22.5 1 24.5 4C34 15 41 26 45 33Q47.5 37 53 37L56 37' fill='none' stroke='%23F27D26' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 64'%3E%3Cpath d='M55 63L55 60C55 36 47 16 35.5 3.5Q33.5 1 31.5 4C22 15 15 26 11 33Q8.5 37 3 37L3 40L30 40A23 23 0 0 1 53 63Z' fill='%23FFFDF9'/%3E%3Cpath d='M45 37C44 25 39.5 16 34 10.5Q33 9.5 32 11C26.5 18 22 26.5 19.5 34Q19 36.5 22.5 36.5Q33 35 42.5 38.5Q45 39.2 45 37Z' fill='%23FFD8B8'/%3E%3Cpath d='M55 63L55 60C55 36 47 16 35.5 3.5Q33.5 1 31.5 4C22 15 15 26 11 33Q8.5 37 3 37L0 37' fill='none' stroke='%23F27D26' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: left top, right top;
+  background-size: 56px 64px;
+  background-repeat: no-repeat;
+}
+
+/* Râu mèo mọc từ má mèo (có má hồng + chấm chân râu), vuốt nhọn tự nhiên */
+html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container):not(:has(:is(.prompt-input-wrapper, ms-prompt-box, .prompt-box-container)))::after {
+  content: "";
+  position: absolute;
+  left: -76px;
+  right: -76px;
+  top: 50%;
+  height: 68px;
+  transform: translateY(-50%);
+  z-index: 221 !important;
+  pointer-events: none;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 68'%3E%3Cellipse cx='82' cy='34' rx='6.5' ry='13' fill='%23FFD1A8' opacity='0.5'/%3E%3Cg fill='%23C8551E'%3E%3Ccircle cx='79' cy='25' r='2.1'/%3E%3Ccircle cx='81' cy='34' r='2.1'/%3E%3Ccircle cx='79' cy='43' r='2.1'/%3E%3Cpath d='M79 23.6Q46 15 10 12Q46 17.6 79 26.4Z'/%3E%3Cpath d='M81 32.6Q44 30.5 4 33Q44 33.2 81 35.4Z'/%3E%3Cpath d='M79 41.6Q48 45.5 14 54Q48 48.2 79 44.4Z'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 68'%3E%3Cellipse cx='10' cy='34' rx='6.5' ry='13' fill='%23FFD1A8' opacity='0.5'/%3E%3Cg fill='%23C8551E'%3E%3Ccircle cx='13' cy='25' r='2.1'/%3E%3Ccircle cx='11' cy='34' r='2.1'/%3E%3Ccircle cx='13' cy='43' r='2.1'/%3E%3Cpath d='M13 23.6Q46 15 82 12Q46 17.6 13 26.4Z'/%3E%3Cpath d='M11 32.6Q48 30.5 88 33Q48 33.2 11 35.4Z'/%3E%3Cpath d='M13 41.6Q44 45.5 78 54Q44 48.2 13 44.4Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: left center, right center;
+  background-size: 92px 68px;
+  background-repeat: no-repeat;
+}
+
+html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container):not(:has(:is(.prompt-input-wrapper, ms-prompt-box, .prompt-box-container))):focus-within {
+  border-color: var(--t-orange) !important;
+  box-shadow: 0 6px 22px rgba(242, 125, 38, .22), var(--t-shadow) !important;
+}
+
+/* Khi focus: từng sợi râu vẫy quanh đúng tọa độ chấm chân râu (chân râu đứng yên hoàn toàn) */
+html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container):not(:has(:is(.prompt-input-wrapper, ms-prompt-box, .prompt-box-container))):focus-within::after {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 68'%3E%3Cellipse cx='82' cy='34' rx='6.5' ry='13' fill='%23FFD1A8' opacity='0.55'/%3E%3Cg fill='%23C8551E'%3E%3Ccircle cx='79' cy='25' r='2.1'/%3E%3Ccircle cx='81' cy='34' r='2.1'/%3E%3Ccircle cx='79' cy='43' r='2.1'/%3E%3Cpath d='M79 23.6Q46 15 10 12Q46 17.6 79 26.4Z'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 79 25%3B7 79 25%3B-3.5 79 25%3B2 79 25%3B0 79 25%3B0 79 25' keyTimes='0%3B0.035%3B0.075%3B0.11%3B0.15%3B1' dur='3.6s' repeatCount='indefinite'/%3E%3C/path%3E%3Cpath d='M81 32.6Q44 30.5 4 33Q44 33.2 81 35.4Z'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 81 34%3B5 81 34%3B-2.5 81 34%3B1.5 81 34%3B0 81 34%3B0 81 34' keyTimes='0%3B0.04%3B0.08%3B0.115%3B0.155%3B1' dur='3.6s' repeatCount='indefinite'/%3E%3C/path%3E%3Cpath d='M79 41.6Q48 45.5 14 54Q48 48.2 79 44.4Z'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 79 43%3B3.5 79 43%3B-3 79 43%3B1 79 43%3B0 79 43%3B0 79 43' keyTimes='0%3B0.045%3B0.085%3B0.12%3B0.16%3B1' dur='3.6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 68'%3E%3Cellipse cx='10' cy='34' rx='6.5' ry='13' fill='%23FFD1A8' opacity='0.55'/%3E%3Cg fill='%23C8551E'%3E%3Ccircle cx='13' cy='25' r='2.1'/%3E%3Ccircle cx='11' cy='34' r='2.1'/%3E%3Ccircle cx='13' cy='43' r='2.1'/%3E%3Cpath d='M13 23.6Q46 15 82 12Q46 17.6 13 26.4Z'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 13 25%3B-7 13 25%3B3.5 13 25%3B-2 13 25%3B0 13 25%3B0 13 25' keyTimes='0%3B0.035%3B0.075%3B0.11%3B0.15%3B1' dur='3.6s' repeatCount='indefinite'/%3E%3C/path%3E%3Cpath d='M11 32.6Q48 30.5 88 33Q48 33.2 11 35.4Z'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 11 34%3B-5 11 34%3B2.5 11 34%3B-1.5 11 34%3B0 11 34%3B0 11 34' keyTimes='0%3B0.04%3B0.08%3B0.115%3B0.155%3B1' dur='3.6s' repeatCount='indefinite'/%3E%3C/path%3E%3Cpath d='M13 41.6Q44 45.5 78 54Q44 48.2 13 44.4Z'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 13 43%3B-3.5 13 43%3B3 13 43%3B-1 13 43%3B0 13 43%3B0 13 43' keyTimes='0%3B0.045%3B0.085%3B0.12%3B0.16%3B1' dur='3.6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+
+html.tabby-on :is(ms-prompt-input-wrapper, ms-prompt-box, ms-autosize-textarea, .prompt-input-wrapper) textarea {
+  background: transparent !important;
+  color: var(--t-espresso) !important;
+  font-family: var(--t-font) !important;
+  font-weight: 500;
+  caret-color: var(--t-cinnamon);
+}
+html.tabby-on textarea::placeholder { color: var(--t-soft) !important; opacity: .85; }
+
+/* Orange pill Run button with a transparent mini paw. */
+html.tabby-on :is(ms-run-button button, button.run-button) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  color: var(--t-cream) !important;
+  background: var(--t-orange) !important;
+  box-shadow: 0 3px 0 #D9661C, 0 6px 14px rgba(200, 85, 30, .16) !important;
+  font-family: var(--t-font) !important;
+  font-weight: 700 !important;
+  letter-spacing: .02em;
+  transition: transform .2s, background .2s, box-shadow .2s !important;
+}
+html.tabby-on :is(ms-run-button button, button.run-button)::before {
+  content: "";
+  flex: none;
+  width: 18px;
+  height: 18px;
+  background: var(--t-paw-white) center / contain no-repeat;
+}
+html.tabby-on :is(ms-run-button button, button.run-button) * { color: var(--t-cream) !important; }
+html.tabby-on :is(ms-run-button button, button.run-button):hover:not([disabled]) {
+  transform: translateY(-2px);
+  background: var(--t-cinnamon) !important;
+  box-shadow: 0 5px 0 #A94114, 0 9px 18px rgba(200, 85, 30, .2) !important;
+}
+html.tabby-on :is(ms-run-button button, button.run-button):active:not([disabled]) { transform: scale(.96); }
+html.tabby-on :is(ms-run-button button, button.run-button)[disabled] { opacity: .55; }
+
+/* Icons themselves never receive an opaque tile or image background. */
+html.tabby-on :is(.mat-mdc-icon-button, mat-icon, .mat-icon) {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+html.tabby-on :is(.mat-mdc-icon-button, mat-icon, .mat-icon) svg { background: transparent !important; }
+html.tabby-on :is(.mdc-button, .mat-mdc-button-base, .mat-mdc-icon-button) { transition: color .2s, transform .2s; }
+html.tabby-on .mat-mdc-icon-button:hover:not([disabled]) { color: var(--t-cinnamon) !important; transform: translateY(-1px); }
+html.tabby-on .mdc-button__label { font-family: var(--t-font); font-weight: 600; }
+html.tabby-on .mat-mdc-unelevated-button:not([disabled]) {
+  --mdc-filled-button-container-color: var(--t-orange);
+  --mat-button-filled-container-color: var(--t-orange);
+}
+html.tabby-on .mat-mdc-chip {
+  border: 1px solid #F29E5E !important;
+  background: var(--t-apricot) !important;
+  border-radius: 999px !important;
+}
+
+/* Marmalade sliders with transparent paw thumbs. */
+html.tabby-on .mat-mdc-slider {
+  --mdc-slider-handle-color: var(--t-orange);
+  --mdc-slider-focus-handle-color: var(--t-cinnamon);
+  --mdc-slider-hover-handle-color: var(--t-cinnamon);
+  --mdc-slider-active-track-color: var(--t-orange);
+  --mdc-slider-inactive-track-color: var(--t-apricot);
+  --mat-slider-handle-color: var(--t-orange);
+  --mat-slider-active-track-color: var(--t-orange);
+  --mat-slider-inactive-track-color: var(--t-apricot);
+  --mat-slider-ripple-color: var(--t-orange);
+}
+html.tabby-on .mat-mdc-slider .mdc-slider__track--inactive { background-color: var(--t-apricot) !important; opacity: 1 !important; }
+html.tabby-on .mat-mdc-slider .mdc-slider__track--active_fill { border-color: var(--t-orange) !important; }
+html.tabby-on .mat-mdc-slider .mdc-slider__thumb-knob {
+  width: 26px !important;
+  height: 26px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: var(--t-paw) center / contain no-repeat !important;
+}
+html.tabby-on input[type="range"]:not(.mdc-slider__input) { accent-color: var(--t-orange); }
+
+html.tabby-on :is(.mat-mdc-option, .mat-mdc-menu-item):hover:not(.mdc-list-item--disabled) { background: var(--t-apricot) !important; }
+html.tabby-on :is(.mat-mdc-option.mdc-list-item--selected, .mat-mdc-option[aria-selected="true"]) { background: var(--t-apricot) !important; }
+html.tabby-on .cdk-overlay-backdrop.cdk-overlay-dark-backdrop { background: rgba(62, 39, 35, .18) !important; }
+html.tabby-on .mdc-tooltip__surface {
+  background: var(--t-espresso) !important;
+  color: var(--t-cream) !important;
+  font-family: var(--t-font) !important;
+  border-radius: 10px;
+}
+html.tabby-on :is(mat-spinner, mat-progress-spinner, .mat-mdc-progress-spinner) {
+  background: var(--t-paw) center / contain no-repeat !important;
+  animation: tabby-spin 1.2s ease-in-out infinite !important;
+}
+html.tabby-on :is(mat-spinner, mat-progress-spinner, .mat-mdc-progress-spinner) > * { opacity: 0 !important; }
+@keyframes tabby-spin { 50% { transform: rotate(18deg) scale(1.08); } }
+html.tabby-on .mat-mdc-progress-bar {
+  --mdc-linear-progress-active-indicator-color: var(--t-orange);
+  --mdc-linear-progress-track-color: var(--t-apricot);
+  --mat-progress-bar-active-indicator-color: var(--t-orange);
+  --mat-progress-bar-track-color: var(--t-apricot);
+}
+
+html.tabby-on ::-webkit-scrollbar { width: 11px; height: 11px; }
+html.tabby-on ::-webkit-scrollbar-track { background: transparent; }
+html.tabby-on ::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background: var(--t-orange) padding-box;
+}
+html.tabby-on ::-webkit-scrollbar-thumb:hover { background: var(--t-cinnamon) padding-box; }
+html.tabby-on ::selection { background: rgba(242, 125, 38, .25); color: var(--t-espresso); }
+
+/* Extension-owned layers. */
+html:not(.tabby-on) :is(#tabby-intro, #tabby-toast) { display: none !important; }
+#tabby-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  z-index: 2147483000;
+  transform: translate(-50%, 20px);
+  opacity: 0;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: var(--t-cream, #FFF9F2);
+  border: 1.5px solid #F27D26;
+  box-shadow: 0 4px 16px rgba(62, 39, 35, .1);
+  color: #3E2723;
+  font: 600 1rem "Tabby Quicksand", "Quicksand", sans-serif;
+  pointer-events: none;
+  transition: opacity .4s, transform .4s;
+}
+#tabby-toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+#tabby-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: rgba(255, 249, 242, .97);
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0, transparent 46px, rgba(255, 229, 204, .65) 46px, rgba(255, 229, 204, .65) 92px),
+    repeating-linear-gradient(90deg, transparent 0, transparent 46px, rgba(255, 229, 204, .65) 46px, rgba(255, 229, 204, .65) 92px);
+  background-size: 92px 92px;
+  transition: opacity .9s;
+}
+#tabby-intro.out { opacity: 0; }
+#tabby-intro .tabby {
+  width: min(30vmin, 200px);
+  height: auto;
+  animation: tabby-arrive .9s cubic-bezier(.34, 1.45, .55, 1) both;
+}
+@keyframes tabby-arrive {
+  0% { transform: translateY(40px) scale(.6); opacity: 0; }
+  70% { transform: translateY(-5px) scale(1.03); opacity: 1; }
+  100% { transform: none; opacity: 1; }
+}
+#tabby-intro svg { width: min(92vw, 900px); overflow: visible; }
+#tabby-intro svg text {
+  font-family: "Tabby Great Vibes", "Great Vibes", cursive;
+  font-size: 104px;
+  fill: #F27D26;
+  fill-opacity: 0;
+  stroke: #C8551E;
+  stroke-width: 1.3;
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 1600;
+  animation: tabby-draw 2.6s .4s ease forwards, tabby-fill 1s 2.3s ease forwards;
+}
+@keyframes tabby-draw { to { stroke-dashoffset: 0; } }
+@keyframes tabby-fill { to { fill-opacity: 1; } }
+#tabby-intro .credit {
+  margin: 0;
+  font: 500 clamp(14px, 2.2vw, 22px) "Tabby Quicksand", "Quicksand", sans-serif;
+  letter-spacing: .1em;
+  color: #8A6254;
+  white-space: nowrap;
+  opacity: 0;
+  animation: tabby-glide 3.2s 2.1s cubic-bezier(.22, .9, .3, 1) forwards;
+}
+#tabby-intro .credit b {
+  font: 400 1.55em "Tabby Great Vibes", "Great Vibes", cursive;
+  letter-spacing: 0;
+  color: #C8551E;
+  background: linear-gradient(100deg, #C8551E 30%, #FFF9F2 48%, #F27D26 52%, #C8551E 70%) 120% 0 / 250% 100% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: tabby-shine 1.6s 3.1s ease forwards;
+  word-spacing: .16em;
+  padding: 0 .1em;
+}
+@keyframes tabby-glide {
+  0% { transform: translateX(-60vw); opacity: 0; }
+  35% { transform: translateX(0); opacity: 1; }
+  80% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(60vw); opacity: 0; }
+}
+@keyframes tabby-shine { to { background-position: -30% 0; } }
+
+@media (max-width: 700px) {
+  html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container)::after { display: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #tabby-intro *, html.tabby-on *::before, html.tabby-on *::after { animation: none !important; }
+  #tabby-intro svg text { stroke-dashoffset: 0; fill-opacity: 1; }
+  #tabby-intro .credit { opacity: 1; }
+  html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container):not(:has(:is(.prompt-input-wrapper, ms-prompt-box, .prompt-box-container))):focus-within::after {
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 68'%3E%3Cellipse cx='82' cy='34' rx='6.5' ry='13' fill='%23FFD1A8' opacity='0.5'/%3E%3Cg fill='%23C8551E'%3E%3Ccircle cx='79' cy='25' r='2.1'/%3E%3Ccircle cx='81' cy='34' r='2.1'/%3E%3Ccircle cx='79' cy='43' r='2.1'/%3E%3Cpath d='M79 23.6Q46 15 10 12Q46 17.6 79 26.4Z'/%3E%3Cpath d='M81 32.6Q44 30.5 4 33Q44 33.2 81 35.4Z'/%3E%3Cpath d='M79 41.6Q48 45.5 14 54Q48 48.2 79 44.4Z'/%3E%3C/g%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 68'%3E%3Cellipse cx='10' cy='34' rx='6.5' ry='13' fill='%23FFD1A8' opacity='0.5'/%3E%3Cg fill='%23C8551E'%3E%3Ccircle cx='13' cy='25' r='2.1'/%3E%3Ccircle cx='11' cy='34' r='2.1'/%3E%3Ccircle cx='13' cy='43' r='2.1'/%3E%3Cpath d='M13 23.6Q46 15 82 12Q46 17.6 13 26.4Z'/%3E%3Cpath d='M11 32.6Q48 30.5 88 33Q48 33.2 11 35.4Z'/%3E%3Cpath d='M13 41.6Q44 45.5 78 54Q44 48.2 13 44.4Z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Marmalade Tabby</title>
+  <link rel="stylesheet" href="popup-fonts.css" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <main class="panel">
+    <header>
+      <img src="img/tabby.png" alt="" width="62" height="62" />
+      <div>
+        <h1>Marmalade Tabby</h1>
+        <p class="sub">Một chiếc khăn ấm cho AI Studio</p>
+      </div>
+    </header>
+
+    <label class="row big">
+      <span>Bật giao diện Marmalade Tabby</span>
+      <input type="checkbox" data-key="enabled" />
+      <i class="sw"></i>
+    </label>
+
+    <section class="group">
+      <label class="row">
+        <span>Intro khi mở AI Studio</span>
+        <input type="checkbox" data-key="intro" />
+        <i class="sw"></i>
+      </label>
+      <label class="row">
+        <span>Tiếng chuông khi bấm nút</span>
+        <input type="checkbox" data-key="sound" />
+        <i class="sw"></i>
+      </label>
+      <label class="row">
+        <span>Báo khi AI trả lời xong</span>
+        <input type="checkbox" data-key="doneChime" />
+        <i class="sw"></i>
+      </label>
+    </section>
+
+    <section class="group">
+      <label class="slider">
+        <span>Âm lượng <b data-out="volume"></b></span>
+        <input type="range" min="0" max="100" step="5" data-key="volume" />
+      </label>
+    </section>
+
+    <div class="actions">
+      <button id="test" data-chime="medium">♪ Nghe thử</button>
+      <button id="replay" data-chime="short">▶ Xem lại intro</button>
+      <button id="reset" data-chime="short">Mặc định</button>
+    </div>
+
+    <p class="tip">Mẹo: đặt AI Studio ở giao diện <b>Sáng</b> để tông kem–cam hiển thị đẹp nhất.</p>
+    <p class="credit">created by <span>Poesía of the Gemlit Chimes</span></p>
+  </main>
+  <script src="chime.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

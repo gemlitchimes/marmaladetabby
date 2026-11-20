@@ -1,0 +1,76 @@
+:root {
+  --orange: #F27D26;
+  --cinnamon: #C8551E;
+  --cream: #FFF9F2;
+  --apricot: #FFE5CC;
+  --espresso: #3E2723;
+  --beige: #F6EDE3;
+  --soft: #8A6254;
+  --paw: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cg fill='%23F27D26'%3E%3Cellipse cx='16' cy='21' rx='8' ry='6.5'/%3E%3Cellipse cx='7' cy='13' rx='3.5' ry='4.5' transform='rotate(-25 7 13)'/%3E%3Cellipse cx='13' cy='7' rx='3.4' ry='4.6' transform='rotate(-8 13 7)'/%3E%3Cellipse cx='20' cy='7' rx='3.4' ry='4.6' transform='rotate(8 20 7)'/%3E%3Cellipse cx='26' cy='13' rx='3.5' ry='4.5' transform='rotate(25 26 13)'/%3E%3C/g%3E%3C/svg%3E");
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  width: 340px;
+  color: var(--espresso);
+  font: 500 14px "Tabby Quicksand", "Quicksand", system-ui, sans-serif;
+  background-color: var(--cream);
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0 18px, rgba(255, 229, 204, .65) 18px 36px),
+    repeating-linear-gradient(90deg, transparent 0 18px, rgba(255, 229, 204, .65) 18px 36px);
+}
+.panel { padding: 16px; display: grid; gap: 12px; }
+header { display: flex; align-items: center; gap: 10px; }
+header img { object-fit: contain; animation: bob 4s ease-in-out infinite; }
+@keyframes bob { 50% { transform: translateY(-3px) rotate(-2deg); } }
+h1 { margin: 0; font: 400 30px/1.05 "Tabby Great Vibes", "Great Vibes", cursive; color: var(--cinnamon); }
+.sub { margin: 4px 0 0; font-size: 12px; color: var(--soft); }
+.group, .row.big {
+  background: var(--cream);
+  border: 1.5px solid #F2D7BD;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(62, 39, 35, .05);
+}
+.group { padding: 4px 12px; }
+.row { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 0; cursor: pointer; }
+.group .row + .row { border-top: 1px dashed rgba(200, 85, 30, .25); }
+.row.big { padding: 12px; font-weight: 700; }
+.row input { position: absolute; opacity: 0; pointer-events: none; }
+.sw { position: relative; flex: none; width: 40px; height: 22px; border-radius: 99px; background: var(--apricot); transition: background .25s; }
+.sw::after {
+  content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%;
+  background: #FFFDF9; box-shadow: 0 1px 3px rgba(62, 39, 35, .25);
+  transition: transform .3s cubic-bezier(.34, 1.7, .55, 1);
+}
+.row input:checked + .sw { background: var(--orange); }
+.row input:checked + .sw::after { transform: translateX(18px); }
+.row input:focus-visible + .sw { outline: 2px solid var(--cinnamon); outline-offset: 2px; }
+.slider { display: grid; gap: 6px; padding: 10px 0; }
+.slider span { display: flex; justify-content: space-between; }
+.slider b { color: var(--cinnamon); }
+input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 28px; background: transparent; }
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px; border-radius: 99px;
+  background: linear-gradient(90deg, var(--orange) var(--p, 55%), var(--apricot) var(--p, 55%));
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 27px; height: 27px; margin-top: -10px; border: 0;
+  background: var(--paw) center / contain no-repeat; cursor: grab;
+}
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.actions #reset { grid-column: span 2; }
+button {
+  border: 0; border-radius: 999px; padding: 9px 10px; cursor: pointer;
+  font: 700 13px "Tabby Quicksand", "Quicksand", sans-serif; color: var(--cream);
+  background: var(--orange); box-shadow: 0 3px 0 #D9661C;
+  transition: transform .2s, background .2s;
+}
+button:hover { transform: translateY(-2px); background: var(--cinnamon); }
+button:active { transform: scale(.96); }
+#reset { background: var(--cream); color: var(--espresso); border: 1.5px solid var(--orange); box-shadow: none; }
+#reset:hover { background: var(--apricot); }
+.tip { margin: 0; font-size: 12px; color: var(--soft); }
+.credit { margin: 0; text-align: center; font-size: 11px; letter-spacing: .08em; color: var(--soft); }
+.credit span { font: 400 17px "Tabby Great Vibes", "Great Vibes", cursive; letter-spacing: 0; color: var(--cinnamon); }
+body.disabled .group { opacity: .5; }
+@media (prefers-reduced-motion: reduce) { header img { animation: none; } }
