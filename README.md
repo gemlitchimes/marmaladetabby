@@ -15,7 +15,7 @@
 - Intro chạy một lần mỗi tab; bấm **Xem lại intro** trong popup để xem lại, hoặc bấm vào intro để bỏ qua.
 - Trình duyệt chỉ cho phát tiếng sau thao tác đầu tiên trên trang, nên intro lần đầu có thể im lặng.
 - Nên đặt AI Studio ở giao diện **Sáng**.
-- Không bật đồng thời với Gemlit Chimes, Hiro's Berry Bunny, Rose's Dollhouse hoặc angels.
+- Không bật đồng thời với các tiện ích giao diện khác để tránh xung đột.
 - Tiện ích chỉ chạy trên `aistudio.google.com`, lưu tùy chọn trong trình duyệt và không gửi dữ liệu ra ngoài.
 
 created by Poesía of the Gemlit Chimes
