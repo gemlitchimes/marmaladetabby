@@ -1,6 +1,10 @@
 # Marmalade Tabby — tiện ích cho Google AI Studio
 
-## Giao diện mào cam tabby và khăn picnic caro ngọt ngào, đáng yêu cho giao diện chat tại AI Studio.
+## Giao diện màu cam tabby và khăn picnic caro ngọt ngào, đáng yêu cho giao diện chat tại AI Studio.
+
+**Marmalade Tabby** mang phong cách mèo mướp cam và khăn vải may tay lên Google AI Studio với bảng màu kem sữa – cam đào ấm áp.
+**Nền & khung chat:** Nền vải kẻ caro dịu mắt kết hợp khung User (cam đào) và Model (linen kem) nổi khối mềm mại, có vân dệt mảnh và đường chỉ khâu đứt đoạn.
+**Ô nhập chat đầu mèo:** Viền cam liền khối uốn lên hai tai nhọn sát mép, điểm má hồng, râu mèo hai bên (vẫy nhẹ khi gõ) cùng nút Run gắn dấu chân mèo trắng.   
 
 ## Cài đặt (Chrome, Edge, Brave, Arc, Opera)
 
