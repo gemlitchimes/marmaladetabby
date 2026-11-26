@@ -18,6 +18,12 @@ html.tabby-on {
   --t-shadow: 0 4px 16px rgba(62, 39, 35, .05);
   --t-paw: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cg fill='%23F27D26'%3E%3Cellipse cx='16' cy='21' rx='8' ry='6.5'/%3E%3Cellipse cx='7' cy='13' rx='3.5' ry='4.5' transform='rotate(-25 7 13)'/%3E%3Cellipse cx='13' cy='7' rx='3.4' ry='4.6' transform='rotate(-8 13 7)'/%3E%3Cellipse cx='20' cy='7' rx='3.4' ry='4.6' transform='rotate(8 20 7)'/%3E%3Cellipse cx='26' cy='13' rx='3.5' ry='4.5' transform='rotate(25 26 13)'/%3E%3C/g%3E%3C/svg%3E");
   --t-paw-white: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cg fill='%23FFF9F2'%3E%3Cellipse cx='16' cy='21' rx='8' ry='6.5'/%3E%3Cellipse cx='7' cy='13' rx='3.5' ry='4.5' transform='rotate(-25 7 13)'/%3E%3Cellipse cx='13' cy='7' rx='3.4' ry='4.6' transform='rotate(-8 13 7)'/%3E%3Cellipse cx='20' cy='7' rx='3.4' ry='4.6' transform='rotate(8 20 7)'/%3E%3Cellipse cx='26' cy='13' rx='3.5' ry='4.5' transform='rotate(25 26 13)'/%3E%3C/g%3E%3C/svg%3E");
+  --t-ear-l: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 64'%3E%3Cpath d='M1 63L1 60C1 36 9 16 20.5 3.5Q22.5 1 24.5 4C34 15 41 26 45 33Q47.5 37 53 37L53 40L26 40A23 23 0 0 0 3 63Z' fill='%23FFFDF9'/%3E%3Cpath d='M11 37C12 25 16.5 16 22 10.5Q23 9.5 24 11C29.5 18 34 26.5 36.5 34Q37 36.5 33.5 36.5Q23 35 13.5 38.5Q11 39.2 11 37Z' fill='%23FFD8B8'/%3E%3Cpath d='M1 63L1 60C1 36 9 16 20.5 3.5Q22.5 1 24.5 4C34 15 41 26 45 33Q47.5 37 53 37L56 37' fill='none' stroke='%23F27D26' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --t-ear-r: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 64'%3E%3Cpath d='M55 63L55 60C55 36 47 16 35.5 3.5Q33.5 1 31.5 4C22 15 15 26 11 33Q8.5 37 3 37L3 40L30 40A23 23 0 0 1 53 63Z' fill='%23FFFDF9'/%3E%3Cpath d='M45 37C44 25 39.5 16 34 10.5Q33 9.5 32 11C26.5 18 22 26.5 19.5 34Q19 36.5 22.5 36.5Q33 35 42.5 38.5Q45 39.2 45 37Z' fill='%23FFD8B8'/%3E%3Cpath d='M55 63L55 60C55 36 47 16 35.5 3.5Q33.5 1 31.5 4C22 15 15 26 11 33Q8.5 37 3 37L0 37' fill='none' stroke='%23F27D26' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --t-whisker-l: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 78 60'%3E%3Cellipse cx='69' cy='30' rx='5.5' ry='11' fill='%23FFD1A8' opacity='0.52'/%3E%3Cg fill='%23C8551E'%3E%3Ccircle cx='65' cy='22' r='1.9'/%3E%3Ccircle cx='67' cy='30' r='1.9'/%3E%3Ccircle cx='65' cy='38' r='1.9'/%3E%3Cpath d='M65 20.8Q38 13.5 8 11Q38 15.8 65 23.2Z'/%3E%3Cpath d='M67 28.8Q36 27.5 3 29.5Q36 29.8 67 31.2Z'/%3E%3Cpath d='M65 36.8Q40 40.5 11 48Q40 42.8 65 39.2Z'/%3E%3C/g%3E%3C/svg%3E");
+  --t-whisker-r: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 78 60'%3E%3Cellipse cx='9' cy='30' rx='5.5' ry='11' fill='%23FFD1A8' opacity='0.52'/%3E%3Cg fill='%23C8551E'%3E%3Ccircle cx='13' cy='22' r='1.9'/%3E%3Ccircle cx='11' cy='30' r='1.9'/%3E%3Ccircle cx='13' cy='38' r='1.9'/%3E%3Cpath d='M13 20.8Q40 13.5 70 11Q40 15.8 13 23.2Z'/%3E%3Cpath d='M11 28.8Q42 27.5 75 29.5Q42 29.8 11 31.2Z'/%3E%3Cpath d='M13 36.8Q38 40.5 67 48Q38 42.8 13 39.2Z'/%3E%3C/g%3E%3C/svg%3E");
+  --t-whisker-l-anim: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 78 60'%3E%3Cellipse cx='69' cy='30' rx='5.5' ry='11' fill='%23FFD1A8' opacity='0.58'/%3E%3Cg fill='%23C8551E'%3E%3Ccircle cx='65' cy='22' r='1.9'/%3E%3Ccircle cx='67' cy='30' r='1.9'/%3E%3Ccircle cx='65' cy='38' r='1.9'/%3E%3Cpath d='M65 20.8Q38 13.5 8 11Q38 15.8 65 23.2Z'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 65 22%3B7 65 22%3B-3.5 65 22%3B2 65 22%3B0 65 22%3B0 65 22' keyTimes='0%3B0.035%3B0.075%3B0.11%3B0.15%3B1' dur='3.6s' repeatCount='indefinite'/%3E%3C/path%3E%3Cpath d='M67 28.8Q36 27.5 3 29.5Q36 29.8 67 31.2Z'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 67 30%3B5 67 30%3B-2.5 67 30%3B1.5 67 30%3B0 67 30%3B0 67 30' keyTimes='0%3B0.04%3B0.08%3B0.115%3B0.155%3B1' dur='3.6s' repeatCount='indefinite'/%3E%3C/path%3E%3Cpath d='M65 36.8Q40 40.5 11 48Q40 42.8 65 39.2Z'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 65 38%3B3.5 65 38%3B-3 65 38%3B1 65 38%3B0 65 38%3B0 65 38' keyTimes='0%3B0.045%3B0.085%3B0.12%3B0.16%3B1' dur='3.6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  --t-whisker-r-anim: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 78 60'%3E%3Cellipse cx='9' cy='30' rx='5.5' ry='11' fill='%23FFD1A8' opacity='0.58'/%3E%3Cg fill='%23C8551E'%3E%3Ccircle cx='13' cy='22' r='1.9'/%3E%3Ccircle cx='11' cy='30' r='1.9'/%3E%3Ccircle cx='13' cy='38' r='1.9'/%3E%3Cpath d='M13 20.8Q40 13.5 70 11Q40 15.8 13 23.2Z'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 13 22%3B-7 13 22%3B3.5 13 22%3B-2 13 22%3B0 13 22%3B0 13 22' keyTimes='0%3B0.035%3B0.075%3B0.11%3B0.15%3B1' dur='3.6s' repeatCount='indefinite'/%3E%3C/path%3E%3Cpath d='M11 28.8Q42 27.5 75 29.5Q42 29.8 11 31.2Z'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 11 30%3B-5 11 30%3B2.5 11 30%3B-1.5 11 30%3B0 11 30%3B0 11 30' keyTimes='0%3B0.04%3B0.08%3B0.115%3B0.155%3B1' dur='3.6s' repeatCount='indefinite'/%3E%3C/path%3E%3Cpath d='M13 36.8Q38 40.5 67 48Q38 42.8 13 39.2Z'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 13 38%3B-3.5 13 38%3B3 13 38%3B-1 13 38%3B0 13 38%3B0 13 38' keyTimes='0%3B0.045%3B0.085%3B0.12%3B0.16%3B1' dur='3.6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
   --t-plaid-bg:
     repeating-linear-gradient(0deg, transparent 0, transparent 46px, rgba(255, 229, 204, .6) 46px, rgba(255, 229, 204, .6) 92px),
     repeating-linear-gradient(90deg, transparent 0, transparent 46px, rgba(255, 229, 204, .6) 46px, rgba(255, 229, 204, .6) 92px),
@@ -112,7 +118,7 @@ html.tabby-on body {
 }
 
 /* ==========================================================================
-   PHÂN TẦNG Z-INDEX: Đẩy toàn bộ dải blur xuống tầng 1, nâng tai mèo lên tầng 220
+   PHÂN TẦNG Z-INDEX: Đẩy toàn bộ dải blur xuống tầng 1, nâng tai & râu lên tầng trên
    ========================================================================== */
 html.tabby-on ms-autoscroll-container,
 html.tabby-on :is(.chat-view-container, .chat-session-content):not(:has(:is(ms-prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container))) {
@@ -127,13 +133,11 @@ html.tabby-on :is(
 }
 html.tabby-on :is(
   ms-chunk-editor, ms-chat-session, .chat-view-container, .chat-session-content, ms-autoscroll-container,
-  footer, ms-prompt-switcher, .prompt-switcher-container, ms-chat-bottom-bar, .bottom-container,
-  .prompt-input-wrapper-container, ms-prompt-input-wrapper
+  footer, ms-prompt-switcher, .prompt-switcher-container, ms-chat-bottom-bar, .bottom-container
 )::before,
 html.tabby-on :is(
   ms-chunk-editor, ms-chat-session, .chat-view-container, .chat-session-content, ms-autoscroll-container,
-  footer, ms-prompt-switcher, .prompt-switcher-container, ms-chat-bottom-bar, .bottom-container,
-  .prompt-input-wrapper-container, ms-prompt-input-wrapper
+  footer, ms-prompt-switcher, .prompt-switcher-container, ms-chat-bottom-bar, .bottom-container
 )::after {
   z-index: 1 !important;
 }
@@ -154,10 +158,14 @@ html.tabby-on :is(
   position: relative;
   z-index: 200 !important;
   overflow: visible !important;
+  contain: none !important;
+  clip-path: none !important;
 }
-html.tabby-on ms-app :is(div, section, footer):has(:is(ms-prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container)):not(:has(:is(ms-autoscroll-container, ms-chat-turn))) {
+html.tabby-on ms-app *:has(:is(ms-prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container)):not(:has(:is(ms-autoscroll-container, ms-chat-turn))) {
   z-index: 200 !important;
   overflow: visible !important;
+  contain: none !important;
+  clip-path: none !important;
 }
 html.tabby-on :is(ms-prompt-switcher, .prompt-switcher-container, ms-prompt-input-wrapper, ms-chat-bottom-bar, .bottom-container) {
   padding-top: 0 !important;
@@ -332,8 +340,8 @@ html.tabby-on :not(pre) > code {
 }
 
 /* ==========================================================================
-   Khung nhập chat đầu mèo: 1 viền liền khối, 2 tai gọn & vuốt nhọn chóp,
-   nằm sát mép trái/phải và nổi lên hẳn tầng trên dải blur.
+   Khung nhập chat đầu mèo: Gộp cả 2 tai + 2 chùm râu vào cùng 1 lớp ::before
+   để không bị ::after của AI Studio ghi đè làm mất râu.
    ========================================================================== */
 html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container) {
   background: var(--t-prompt) !important;
@@ -351,45 +359,44 @@ html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, 
 html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container):not(:has(:is(.prompt-input-wrapper, ms-prompt-box, .prompt-box-container))) {
   position: relative !important;
   overflow: visible !important;
+  contain: none !important;
+  clip-path: none !important;
   margin-top: 0 !important;
   z-index: 210 !important;
 }
 
-/* 2 tai mèo nhỏ gọn, vuốt nhọn chóp, sát mép trái/phải và nằm ở tầng cao hơn dải blur */
+/* Gộp 2 tai mèo + 2 chùm râu mèo (có má hồng & chấm chân râu) trên cùng ::before */
 html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container):not(:has(:is(.prompt-input-wrapper, ms-prompt-box, .prompt-box-container)))::before {
-  content: "";
-  position: absolute;
-  left: -2px;
-  right: -2px;
-  top: -38px;
-  height: 64px;
-  z-index: 220 !important;
-  pointer-events: none;
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  left: -62px !important;
+  right: -62px !important;
+  top: -38px !important;
+  bottom: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  z-index: 225 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: none !important;
+  background-color: transparent !important;
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 64'%3E%3Cpath d='M1 63L1 60C1 36 9 16 20.5 3.5Q22.5 1 24.5 4C34 15 41 26 45 33Q47.5 37 53 37L53 40L26 40A23 23 0 0 0 3 63Z' fill='%23FFFDF9'/%3E%3Cpath d='M11 37C12 25 16.5 16 22 10.5Q23 9.5 24 11C29.5 18 34 26.5 36.5 34Q37 36.5 33.5 36.5Q23 35 13.5 38.5Q11 39.2 11 37Z' fill='%23FFD8B8'/%3E%3Cpath d='M1 63L1 60C1 36 9 16 20.5 3.5Q22.5 1 24.5 4C34 15 41 26 45 33Q47.5 37 53 37L56 37' fill='none' stroke='%23F27D26' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 64'%3E%3Cpath d='M55 63L55 60C55 36 47 16 35.5 3.5Q33.5 1 31.5 4C22 15 15 26 11 33Q8.5 37 3 37L3 40L30 40A23 23 0 0 1 53 63Z' fill='%23FFFDF9'/%3E%3Cpath d='M45 37C44 25 39.5 16 34 10.5Q33 9.5 32 11C26.5 18 22 26.5 19.5 34Q19 36.5 22.5 36.5Q33 35 42.5 38.5Q45 39.2 45 37Z' fill='%23FFD8B8'/%3E%3Cpath d='M55 63L55 60C55 36 47 16 35.5 3.5Q33.5 1 31.5 4C22 15 15 26 11 33Q8.5 37 3 37L0 37' fill='none' stroke='%23F27D26' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  background-position: left top, right top;
-  background-size: 56px 64px;
-  background-repeat: no-repeat;
-}
-
-/* Râu mèo mọc từ má mèo (có má hồng + chấm chân râu), vuốt nhọn tự nhiên */
-html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container):not(:has(:is(.prompt-input-wrapper, ms-prompt-box, .prompt-box-container)))::after {
-  content: "";
-  position: absolute;
-  left: -76px;
-  right: -76px;
-  top: 50%;
-  height: 68px;
-  transform: translateY(-50%);
-  z-index: 221 !important;
-  pointer-events: none;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 68'%3E%3Cellipse cx='82' cy='34' rx='6.5' ry='13' fill='%23FFD1A8' opacity='0.5'/%3E%3Cg fill='%23C8551E'%3E%3Ccircle cx='79' cy='25' r='2.1'/%3E%3Ccircle cx='81' cy='34' r='2.1'/%3E%3Ccircle cx='79' cy='43' r='2.1'/%3E%3Cpath d='M79 23.6Q46 15 10 12Q46 17.6 79 26.4Z'/%3E%3Cpath d='M81 32.6Q44 30.5 4 33Q44 33.2 81 35.4Z'/%3E%3Cpath d='M79 41.6Q48 45.5 14 54Q48 48.2 79 44.4Z'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 68'%3E%3Cellipse cx='10' cy='34' rx='6.5' ry='13' fill='%23FFD1A8' opacity='0.5'/%3E%3Cg fill='%23C8551E'%3E%3Ccircle cx='13' cy='25' r='2.1'/%3E%3Ccircle cx='11' cy='34' r='2.1'/%3E%3Ccircle cx='13' cy='43' r='2.1'/%3E%3Cpath d='M13 23.6Q46 15 82 12Q46 17.6 13 26.4Z'/%3E%3Cpath d='M11 32.6Q48 30.5 88 33Q48 33.2 11 35.4Z'/%3E%3Cpath d='M13 41.6Q44 45.5 78 54Q44 48.2 13 44.4Z'/%3E%3C/g%3E%3C/svg%3E");
-  background-position: left center, right center;
-  background-size: 92px 68px;
-  background-repeat: no-repeat;
+    var(--t-ear-l),
+    var(--t-ear-r),
+    var(--t-whisker-l),
+    var(--t-whisker-r) !important;
+  background-position:
+    60px 0,
+    calc(100% - 60px) 0,
+    0 calc(50% + 19px),
+    100% calc(50% + 19px) !important;
+  background-size:
+    56px 64px,
+    56px 64px,
+    78px 60px,
+    78px 60px !important;
+  background-repeat: no-repeat !important;
 }
 
 html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container):not(:has(:is(.prompt-input-wrapper, ms-prompt-box, .prompt-box-container))):focus-within {
@@ -397,11 +404,13 @@ html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, 
   box-shadow: 0 6px 22px rgba(242, 125, 38, .22), var(--t-shadow) !important;
 }
 
-/* Khi focus: từng sợi râu vẫy quanh đúng tọa độ chấm chân râu (chân râu đứng yên hoàn toàn) */
-html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container):not(:has(:is(.prompt-input-wrapper, ms-prompt-box, .prompt-box-container))):focus-within::after {
+/* Khi focus: giữ nguyên 2 tai, đổi 2 chùm râu sang bản rung quanh chấm chân râu cố định */
+html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container):not(:has(:is(.prompt-input-wrapper, ms-prompt-box, .prompt-box-container))):focus-within::before {
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 68'%3E%3Cellipse cx='82' cy='34' rx='6.5' ry='13' fill='%23FFD1A8' opacity='0.55'/%3E%3Cg fill='%23C8551E'%3E%3Ccircle cx='79' cy='25' r='2.1'/%3E%3Ccircle cx='81' cy='34' r='2.1'/%3E%3Ccircle cx='79' cy='43' r='2.1'/%3E%3Cpath d='M79 23.6Q46 15 10 12Q46 17.6 79 26.4Z'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 79 25%3B7 79 25%3B-3.5 79 25%3B2 79 25%3B0 79 25%3B0 79 25' keyTimes='0%3B0.035%3B0.075%3B0.11%3B0.15%3B1' dur='3.6s' repeatCount='indefinite'/%3E%3C/path%3E%3Cpath d='M81 32.6Q44 30.5 4 33Q44 33.2 81 35.4Z'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 81 34%3B5 81 34%3B-2.5 81 34%3B1.5 81 34%3B0 81 34%3B0 81 34' keyTimes='0%3B0.04%3B0.08%3B0.115%3B0.155%3B1' dur='3.6s' repeatCount='indefinite'/%3E%3C/path%3E%3Cpath d='M79 41.6Q48 45.5 14 54Q48 48.2 79 44.4Z'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 79 43%3B3.5 79 43%3B-3 79 43%3B1 79 43%3B0 79 43%3B0 79 43' keyTimes='0%3B0.045%3B0.085%3B0.12%3B0.16%3B1' dur='3.6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 68'%3E%3Cellipse cx='10' cy='34' rx='6.5' ry='13' fill='%23FFD1A8' opacity='0.55'/%3E%3Cg fill='%23C8551E'%3E%3Ccircle cx='13' cy='25' r='2.1'/%3E%3Ccircle cx='11' cy='34' r='2.1'/%3E%3Ccircle cx='13' cy='43' r='2.1'/%3E%3Cpath d='M13 23.6Q46 15 82 12Q46 17.6 13 26.4Z'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 13 25%3B-7 13 25%3B3.5 13 25%3B-2 13 25%3B0 13 25%3B0 13 25' keyTimes='0%3B0.035%3B0.075%3B0.11%3B0.15%3B1' dur='3.6s' repeatCount='indefinite'/%3E%3C/path%3E%3Cpath d='M11 32.6Q48 30.5 88 33Q48 33.2 11 35.4Z'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 11 34%3B-5 11 34%3B2.5 11 34%3B-1.5 11 34%3B0 11 34%3B0 11 34' keyTimes='0%3B0.04%3B0.08%3B0.115%3B0.155%3B1' dur='3.6s' repeatCount='indefinite'/%3E%3C/path%3E%3Cpath d='M13 41.6Q44 45.5 78 54Q44 48.2 13 44.4Z'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 13 43%3B-3.5 13 43%3B3 13 43%3B-1 13 43%3B0 13 43%3B0 13 43' keyTimes='0%3B0.045%3B0.085%3B0.12%3B0.16%3B1' dur='3.6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    var(--t-ear-l),
+    var(--t-ear-r),
+    var(--t-whisker-l-anim),
+    var(--t-whisker-r-anim) !important;
 }
 
 html.tabby-on :is(ms-prompt-input-wrapper, ms-prompt-box, ms-autosize-textarea, .prompt-input-wrapper) textarea {
@@ -613,16 +622,24 @@ html:not(.tabby-on) :is(#tabby-intro, #tabby-toast) { display: none !important; 
 }
 @keyframes tabby-shine { to { background-position: -30% 0; } }
 
-@media (max-width: 700px) {
-  html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container)::after { display: none !important; }
+/* Màn hình quá nhỏ chỉ giữ lại 2 tai để tránh tạo thanh cuộn ngang */
+@media (max-width: 480px) {
+  html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container):not(:has(:is(.prompt-input-wrapper, ms-prompt-box, .prompt-box-container)))::before {
+    left: -2px !important;
+    right: -2px !important;
+    bottom: auto !important;
+    height: 64px !important;
+    background-image: var(--t-ear-l), var(--t-ear-r) !important;
+    background-position: left top, right top !important;
+    background-size: 56px 64px, 56px 64px !important;
+  }
 }
+
 @media (prefers-reduced-motion: reduce) {
   #tabby-intro *, html.tabby-on *::before, html.tabby-on *::after { animation: none !important; }
   #tabby-intro svg text { stroke-dashoffset: 0; fill-opacity: 1; }
   #tabby-intro .credit { opacity: 1; }
-  html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container):not(:has(:is(.prompt-input-wrapper, ms-prompt-box, .prompt-box-container))):focus-within::after {
-    background-image:
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 68'%3E%3Cellipse cx='82' cy='34' rx='6.5' ry='13' fill='%23FFD1A8' opacity='0.5'/%3E%3Cg fill='%23C8551E'%3E%3Ccircle cx='79' cy='25' r='2.1'/%3E%3Ccircle cx='81' cy='34' r='2.1'/%3E%3Ccircle cx='79' cy='43' r='2.1'/%3E%3Cpath d='M79 23.6Q46 15 10 12Q46 17.6 79 26.4Z'/%3E%3Cpath d='M81 32.6Q44 30.5 4 33Q44 33.2 81 35.4Z'/%3E%3Cpath d='M79 41.6Q48 45.5 14 54Q48 48.2 79 44.4Z'/%3E%3C/g%3E%3C/svg%3E"),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 68'%3E%3Cellipse cx='10' cy='34' rx='6.5' ry='13' fill='%23FFD1A8' opacity='0.5'/%3E%3Cg fill='%23C8551E'%3E%3Ccircle cx='13' cy='25' r='2.1'/%3E%3Ccircle cx='11' cy='34' r='2.1'/%3E%3Ccircle cx='13' cy='43' r='2.1'/%3E%3Cpath d='M13 23.6Q46 15 82 12Q46 17.6 13 26.4Z'/%3E%3Cpath d='M11 32.6Q48 30.5 88 33Q48 33.2 11 35.4Z'/%3E%3Cpath d='M13 41.6Q44 45.5 78 54Q44 48.2 13 44.4Z'/%3E%3C/g%3E%3C/svg%3E");
+  html.tabby-on :is(ms-prompt-input-wrapper .prompt-input-wrapper, ms-prompt-box, .prompt-input-wrapper, .prompt-box-container):not(:has(:is(.prompt-input-wrapper, ms-prompt-box, .prompt-box-container))):focus-within::before {
+    background-image: var(--t-ear-l), var(--t-ear-r), var(--t-whisker-l), var(--t-whisker-r) !important;
   }
 }
